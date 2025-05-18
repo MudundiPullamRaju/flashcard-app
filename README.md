@@ -1,23 +1,44 @@
 # Flashcard Backend API
 
-## Overview
+##  Overview
 
 This is a backend API for a smart flashcard system. Users can add flashcards (question + answer), and the system automatically infers the subject based on keywords in the question. Students can later retrieve flashcards across multiple subjects, intelligently mixed.
 
 ---
 
-## Features
+##  Features
 
-- **Add flashcards** with automatic subject inference (Physics, Biology, Computer Science, Mathematics, General)
-- **Retrieve flashcards** by student ID with mixed subjects
-- Simple rule-based subject classification
+-  Add flashcards with automatic **subject inference** (Physics, Biology, Computer Science, Mathematics, General)
+-  Retrieve flashcards for a student with a **mix of subjects**
+-  Simple, rule-based keyword classification
 
 ---
 
-## Installation and Setup
+##  Installation and Setup
 
-1. **Clone the repository**
+### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MudundiPullamRaju/flashcard-app.git
 cd flashcard-app
+
+### 2. Install Dependencies
+pip install -r requirements.txt
+
+### 3. Run the Server
+uvicorn main:app --reload
+
+### Project Structure
+flashcard-app/
+│
+├── app/
+│   ├── __init__.py
+│   ├── database.py
+│   ├── models.py
+│
+├── main.py
+├── requirements.txt
+├── flashcards.db
+├── README.md
+
+
